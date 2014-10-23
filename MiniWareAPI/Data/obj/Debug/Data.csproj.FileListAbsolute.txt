@@ -1,3 +1,4 @@
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Data\bin\Debug\Data.dll.config
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Data\bin\Debug\Data.dll
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Data\bin\Debug\Data.pdb
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Data\bin\Debug\Models.dll

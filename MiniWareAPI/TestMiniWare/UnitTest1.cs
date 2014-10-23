@@ -3,6 +3,8 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Models;
+using Bussiness;
 
 namespace TestMiniWare
 {
@@ -12,11 +14,14 @@ namespace TestMiniWare
     [TestClass]
     public class UnitTest1
     {
+        private BussinessUsuario usuario;
         public UnitTest1()
         {
             //
             // TODO: Add constructor logic here
             //
+            usuario = new BussinessUsuario();
+            
         }
 
         private TestContext testContextInstance;
@@ -60,11 +65,20 @@ namespace TestMiniWare
         #endregion
 
         [TestMethod]
-        public void TestMethod1()
+        public void SaveUser()
         {
-            //
-            // TODO: Add test logic here
-            //
+            usuario.Save(new User()
+            {
+                Nombre = "Edrei Javier",
+                ApPaterno = "Bastar",
+                ApMaterno = "Sarao",
+                Username = "Genious",
+                Password = "edrei8989",
+                Celular = 9212408081,
+                Correo = "basae_01@hotmail.com",
+                Grado = 9,
+                Grupo = "B"
+            });
         }
     }
 }

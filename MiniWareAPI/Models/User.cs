@@ -13,7 +13,7 @@ namespace Models
         public string ApMaterno { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int? Celular { get; set; }
+        public long? Celular { get; set; }
         public string Correo { get; set; }
         public int? Grado { get; set; }
         public string Grupo { get; set; }

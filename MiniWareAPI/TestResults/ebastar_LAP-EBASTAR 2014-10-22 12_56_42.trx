@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="32260b04-8081-4f0c-8a0b-9c522b5c2846" name="ebastar@LAP-EBASTAR 2014-10-22 12:56:42" runUser="PTH\ebastar" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="bed6b4fd-d570-4e2a-9237-e0aa2aa1e62d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="ebastar_LAP-EBASTAR 2014-10-22 12_56_42">
+      <DeploymentItem filename="C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Models\bin\Debug\Models.dll" />
+      <DeploymentItem filename="C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Bussiness.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-10-22T12:56:42.1188662-05:00" queuing="2014-10-22T12:56:44.1131999-05:00" start="2014-10-22T12:56:44.3023267-05:00" finish="2014-10-22T12:57:18.3060416-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SaveUser" storage="c:\users\ebastar\documents\github\miniware\miniware\miniwareapi\testminiware\bin\debug\testminiware.dll" id="94da58ae-6181-310d-d25c-17962f8b7b6a">
+      <Execution id="1d295d01-e9eb-4bb3-a80c-49fa70375e5c" />
+      <TestMethod codeBase="C:/Users/ebastar/Documents/GitHub/MiniWare/MiniWare/MiniWareAPI/TestMiniWare/bin/Debug/TestMiniWare.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestMiniWare.UnitTest1, TestMiniWare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SaveUser" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="94da58ae-6181-310d-d25c-17962f8b7b6a" executionId="1d295d01-e9eb-4bb3-a80c-49fa70375e5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="1d295d01-e9eb-4bb3-a80c-49fa70375e5c" testId="94da58ae-6181-310d-d25c-17962f8b7b6a" testName="SaveUser" computerName="LAP-EBASTAR" duration="00:00:33.1138641" startTime="2014-10-22T12:56:44.4284106-05:00" endTime="2014-10-22T12:57:18.1559426-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d295d01-e9eb-4bb3-a80c-49fa70375e5c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

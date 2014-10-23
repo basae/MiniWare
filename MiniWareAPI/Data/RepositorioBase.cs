@@ -9,6 +9,11 @@ namespace Data
 {
     public class RepositorioBase
     {
-        public SqlConnection Conexion=new SqlConnection(ConfigurationSettings.AppSettings["MiniWareBD"]);        
+        public SqlConnection Conexion;
+        public RepositorioBase()
+        {
+            string test = ConfigurationManager.AppSettings["MiniWareBD"];
+            Conexion = new SqlConnection(ConfigurationManager.AppSettings["MiniWareBD"]);
+        }
     }
 }
