@@ -14,6 +14,12 @@ namespace MiniWareAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "Usuarios",
+                routeTemplate: "api/{controller}/Grado/{grado}/Grupo/{grupo}",
+                defaults: new { grado= RouteParameter.Optional,grupo=RouteParameter.Optional}
+            );
         }
     }
 }

@@ -81,7 +81,7 @@ namespace Bussiness
             return Respuesta;
         }
 
-        public User Get(int id)
+        public ResponseAPI<User> Get(int id)
         {
             ResponseAPI<User> Respuesta = new ResponseAPI<User>();
             try
@@ -100,6 +100,62 @@ namespace Bussiness
 
             }
             return Respuesta;
+        }
+
+        public ResponseAPI<User> Get()
+        {
+            ResponseAPI<User> Respuesta = new ResponseAPI<User>();
+            try
+            {
+                Respuesta = repositorio.Get();
+                if (Respuesta.Error)
+                    throw new Exception(Respuesta.Mensage);
+            }
+            catch (Exception ex)
+            {
+                Respuesta.Error = true;
+                Respuesta.Mensage = ex.Message;
+
+            }
+            return Respuesta;
+        }
+
+        public ResponseAPI<User> Get(int grado,string grupo)
+        {
+            ResponseAPI<User> Respuesta = new ResponseAPI<User>();
+            try
+            {
+                if (grado == 0)
+                    throw new Exception("Se debe espesificar un ID");
+                if (string.IsNullOrWhiteSpace(grupo) || isNumeric(grupo))
+                    throw new Exception("Es necesario espesificar el que Grupo y debe ser una letra");
+                Respuesta = repositorio.Get(grado,grupo);
+                if (Respuesta.List.Count() == null || Respuesta.List.Count() == 0)
+                    throw new Exception("No se Encontro Ningun Registro en esta consulta");
+                if (Respuesta.Error)
+                    throw new Exception(Respuesta.Mensage);
+            }
+            catch (Exception ex)
+            {
+                Respuesta.Error = true;
+                Respuesta.Mensage = ex.Message;
+
+            }
+            return Respuesta;
+        }
+
+        private bool isNumeric(string value)
+        {
+            bool isNumber = true;
+            char[] valiadte={'1','2','3','4','5','6','7','8','9','0','.'};
+            foreach (char c in value.ToCharArray())
+            {
+                if (!valiadte.Contains(c))
+                {
+                    isNumber = false;
+                }
+            }
+            return isNumber;
         }
 
     }

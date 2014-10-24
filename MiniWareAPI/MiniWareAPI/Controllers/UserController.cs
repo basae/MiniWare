@@ -13,30 +13,52 @@ namespace MiniWareAPI.Controllers
     {
         BussinessUsuario repository = new BussinessUsuario();
         // GET api/user
-        public IEnumerable<string> Get()
+        public IEnumerable<User> Get()
         {
-            return new string[] { "value1", "value2" };
+            ResponseAPI<User> Respuesta = new ResponseAPI<User>();
+            Respuesta = repository.Get();
+            if (Respuesta.Error)
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+            return Respuesta.List;
         }
 
         // GET api/user/5
-        public string Get(int id)
+        public User Get(int id)
         {
-            return "test";
+            ResponseAPI<User> Respuesta = new ResponseAPI<User>();
+            Respuesta = repository.Get(id);
+            if(Respuesta.Error)
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+            return (User)Respuesta.Modelo;
         }
 
+        public IEnumerable<User> Get(int grado,string grupo)
+        {
+            ResponseAPI<User> Respuesta = new ResponseAPI<User>();
+            Respuesta = repository.Get(grado, grupo);
+            if (Respuesta.Error)
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+            else
+            return Respuesta.List;
+
+        }
         // POST api/user
         public bool Post([FromBody]User Usuario)
         {
             
             ResponseAPI<User> Respuesta = repository.Save(Usuario);
             if (Respuesta.Error)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
             return true;
         }
 
         // PUT api/user/5
-        public void Put(int id, [FromBody]string value)
+        public bool Put([FromBody]User Usuario)
         {
+            ResponseAPI<User> Respuesta = repository.Update(Usuario);
+            if(Respuesta.Error)
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest,Respuesta.Mensage));
+            return true;
         }
 
         // DELETE api/user/5

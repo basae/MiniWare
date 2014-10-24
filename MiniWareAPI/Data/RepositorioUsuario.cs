@@ -83,7 +83,7 @@ namespace Data
                                              ApMaterno = (string)dt.Rows[0]["ApMaterno"],
                                              Username = (string)dt.Rows[0]["Username"],
                                              Password = (string)dt.Rows[0]["Password"],
-                                             Celular = (int)dt.Rows[0]["Celular"],
+                                             Celular = (Int64)dt.Rows[0]["Celular"],
                                              Correo = (string)dt.Rows[0]["Correo"],
                                              Grado = (int)dt.Rows[0]["Grado"],
                                              Grupo = (string)dt.Rows[0]["Grupo"]
@@ -127,7 +127,7 @@ namespace Data
                         SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         adaptador.Fill(dt);
-                        Respuesta.List = from row in dt.Rows.Cast<DataRow>()
+                         Respuesta.List= from row in dt.Rows.Cast<DataRow>()
                                          select new User
                                          {
                                              Id = (int)row["Id"],
@@ -136,11 +136,13 @@ namespace Data
                                              ApMaterno = (string)row["ApMaterno"],
                                              Username = (string)row["Username"],
                                              Password = (string)row["Password"],
-                                             Celular = (int)row["Celular"],
+                                             Celular = (Int64)row["Celular"],
                                              Correo = (string)row["Correo"],
                                              Grado = (int)row["Grado"],
                                              Grupo = (string)row["Grupo"]
                                          };
+                         if (Respuesta.List.OfType<Exception>().Count() > 0)
+                             throw new Exception(Respuesta.List.OfType<Exception>().FirstOrDefault().Message);
                     }
                 }
             }
@@ -187,11 +189,13 @@ namespace Data
                                              ApMaterno = (string)row["ApMaterno"],
                                              Username = (string)row["Username"],
                                              Password = (string)row["Password"],
-                                             Celular = (int)row["Celular"],
+                                             Celular = (Int64)row["Celular"],
                                              Correo = (string)row["Correo"],
                                              Grado = (int)row["Grado"],
                                              Grupo = (string)row["Grupo"]
                                          };
+                        if (Respuesta.List.OfType<Exception>().Count() > 0)
+                            throw new Exception(Respuesta.List.OfType<Exception>().FirstOrDefault().Message);
                     }
                 }
             }
