@@ -34,3 +34,9 @@ C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\obj\Debug\MiniWareAPI.csprojResolveAssemblyReference.cache
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\obj\Debug\MiniWareAPI.dll
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\obj\Debug\MiniWareAPI.pdb
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\Bussiness.dll
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\Models.dll
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\Data.dll
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\Bussiness.pdb
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\Models.pdb
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\MiniWareAPI\bin\Data.pdb

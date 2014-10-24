@@ -12,7 +12,6 @@ namespace Data
         public SqlConnection Conexion;
         public RepositorioBase()
         {
-            string test = ConfigurationManager.AppSettings["MiniWareBD"];
             Conexion = new SqlConnection(ConfigurationManager.AppSettings["MiniWareBD"]);
         }
     }

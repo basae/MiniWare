@@ -36,6 +36,8 @@ namespace Bussiness
                     throw new Exception("El Grupo no puede estar vacio o nulo");
                 if (!Usuario.Grado.HasValue || Usuario.Grado==0)
                     throw new Exception("El Grado no puede estar vacio o ser 0");
+                if (!Usuario.Id.HasValue)
+                    Usuario.Id = 0;
 
                 Respuesta = repositorio.Save(Usuario);
             }
@@ -75,6 +77,27 @@ namespace Bussiness
             {
                 Respuesta.Error = true;
                 Respuesta.Mensage = ex.Message;
+            }
+            return Respuesta;
+        }
+
+        public User Get(int id)
+        {
+            ResponseAPI<User> Respuesta = new ResponseAPI<User>();
+            try
+            {
+                if (id == 0)
+                    throw new Exception("Se debe espesificar un ID");
+                
+                Respuesta = repositorio.Get(id);
+                if (Respuesta.Error)
+                    throw new Exception(Respuesta.Mensage);
+            }
+            catch (Exception ex)
+            {
+                Respuesta.Error = true;
+                Respuesta.Mensage = ex.Message;
+
             }
             return Respuesta;
         }
