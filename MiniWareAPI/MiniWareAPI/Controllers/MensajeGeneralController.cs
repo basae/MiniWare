@@ -13,8 +13,13 @@ namespace MiniWareAPI.Controllers
     {
         private BussinessMensajeGeneral _repository = new BussinessMensajeGeneral();
         // GET api/mensajegeneral
-        public IEnumerable<MensajeGeneral> Get(DateTime Date)
+        public IEnumerable<MensajeGeneral> Get()
         {
+            DateTime Date;
+            if (!Request.Headers.Contains("FechaConsulta"))
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Falta Header FechaConsulta"));
+            else
+                Date = DateTime.Parse(Request.Headers.GetValues("FechaConsulta").FirstOrDefault());
             ResponseAPI<MensajeGeneral> Respuesta = _repository.Get(Date);
             if (Respuesta.Error)
                 throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));

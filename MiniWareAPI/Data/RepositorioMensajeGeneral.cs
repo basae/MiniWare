@@ -48,6 +48,7 @@ namespace Data
                     Conexion.Open();
                     using (SqlCommand cmd = new SqlCommand("SP_S_GetMensagesGeneralesByDay", Conexion))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Date", date);
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();

@@ -7,3 +7,12 @@ C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Bussiness\bin\De
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Bussiness\obj\Debug\Bussiness.csprojResolveAssemblyReference.cache
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Bussiness\obj\Debug\Bussiness.dll
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\Bussiness\obj\Debug\Bussiness.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Bussiness.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Bussiness.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Data.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Models.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Data.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\bin\Debug\Models.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\obj\Debug\Bussiness.csprojResolveAssemblyReference.cache
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\obj\Debug\Bussiness.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Bussiness\obj\Debug\Bussiness.pdb
