@@ -49,6 +49,7 @@
     </Compile>
     <Compile Include="RepositorioBase.cs" />
     <Compile Include="RepositorioMensajeGeneral.cs" />
+    <Compile Include="RepositorioMensajePersonal.cs" />
     <Compile Include="RepositorioUsuario.cs" />
   </ItemGroup>
   <ItemGroup>

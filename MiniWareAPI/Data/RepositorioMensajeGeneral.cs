@@ -25,7 +25,11 @@ namespace Data
                         cmd.Parameters.AddWithValue("@Descripcion", Msg.Descripcion);
                         cmd.Parameters.AddWithValue("@De", Msg.De);
                         cmd.Parameters.AddWithValue("@FechaCierre", Msg.FechaCierre);
+                        cmd.Parameters.AddWithValue("@Grado", Msg.Grado);
+                        cmd.Parameters.AddWithValue("@Grupo", Msg.Grupo);
+                        cmd.Parameters["@Id"].Direction = ParameterDirection.InputOutput;
                         cmd.ExecuteNonQuery();
+                        Respuesta.Modelo = cmd.Parameters["@Id"].Value;
                     }
                 }
             }
@@ -52,6 +56,7 @@ namespace Data
                         cmd.Parameters.AddWithValue("@Date", date);
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
+                        adapter.Fill(dt);
                         Respuesta.List = from row in dt.Rows.Cast<DataRow>()
                                          select new MensajeGeneral
                                          {

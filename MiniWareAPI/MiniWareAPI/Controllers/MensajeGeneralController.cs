@@ -37,7 +37,12 @@ namespace MiniWareAPI.Controllers
         {
             ResponseAPI<MensajeGeneral> Respuesta = _repository.Save(msg);
             if (Respuesta.Error)
-                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+                if (Respuesta.Modelo == null)
+                    throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+                else
+                {
+                    throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.OK, "Mensaje General Almacenado Correctamente con ID: " + ((MensajeGeneral)Respuesta.Modelo).Id + ", pero ocurrio un problema en la disperción a los alumnos el error fue" + Respuesta.Mensage));
+                }
             return true;
         }
 

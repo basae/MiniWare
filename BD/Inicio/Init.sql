@@ -18,13 +18,15 @@ create table Usuario
 
 go
 
-create table MensajeGeneral
+alter table MensajeGeneral
 (
 Id int primary key identity,
 Descripcion text,
 De varchar(100),
 fechaCreacion datetime,
 fechaCierre datetime,
+Grado int,
+Grupo varchar(2)
 )
 
 go

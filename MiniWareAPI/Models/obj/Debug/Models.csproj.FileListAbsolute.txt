@@ -6,3 +6,4 @@ C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Models\bin\Debug\Models.dll
 C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Models\bin\Debug\Models.pdb
 C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Models\obj\Debug\Models.dll
 C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Models\obj\Debug\Models.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
