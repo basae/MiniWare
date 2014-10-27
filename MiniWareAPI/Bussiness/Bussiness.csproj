@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BussinessMensajeGeneral.cs" />
+    <Compile Include="BussinessMensajePersonal.cs" />
     <Compile Include="BussinessUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

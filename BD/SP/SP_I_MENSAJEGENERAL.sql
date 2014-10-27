@@ -9,10 +9,12 @@ GO
 -- Description:	Inserta un Mensaje General
 -- =============================================
 CREATE PROCEDURE SP_I_MENSAJEGENERAL
-	@Id int,
+	@Id int output,
 	@Descripcion text,
 	@De varchar(100),
-	@FechaCierre datetime
+	@FechaCierre datetime,
+	@Grado int,
+	@Grupo varchar(2)
 AS
 BEGIN
 	INSERT INTO dbo.MensajeGeneral
@@ -29,5 +31,7 @@ BEGIN
 		getdate(),
 		@FechaCierre
 	)
+
+	set @Id=scope_identity();
 END
 GO

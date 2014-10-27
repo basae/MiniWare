@@ -9,3 +9,14 @@ C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\TestMiniWare\bin
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\TestMiniWare\obj\Debug\TestMiniWare.csprojResolveAssemblyReference.cache
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\TestMiniWare\obj\Debug\TestMiniWare.dll
 C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\MiniWareAPI\TestMiniWare\obj\Debug\TestMiniWare.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\TestMiniWare.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\TestMiniWare.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\Bussiness.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\Models.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\Data.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\Bussiness.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\Models.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\bin\Debug\Data.pdb
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\obj\Debug\TestMiniWare.csprojResolveAssemblyReference.cache
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\obj\Debug\TestMiniWare.dll
+C:\Users\Edrei\Documents\GitHub\MiniWare\MiniWareAPI\TestMiniWare\obj\Debug\TestMiniWare.pdb

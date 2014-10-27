@@ -13,8 +13,13 @@ namespace MiniWareAPI.Controllers
     {
         private BussinessMensajeGeneral _repository = new BussinessMensajeGeneral();
         // GET api/mensajegeneral
-        public IEnumerable<MensajeGeneral> Get(DateTime Date)
+        public IEnumerable<MensajeGeneral> Get()
         {
+            DateTime Date;
+            if (!Request.Headers.Contains("FechaConsulta"))
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Falta Header FechaConsulta"));
+            else
+                Date = DateTime.Parse(Request.Headers.GetValues("FechaConsulta").FirstOrDefault());
             ResponseAPI<MensajeGeneral> Respuesta = _repository.Get(Date);
             if (Respuesta.Error)
                 throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
@@ -32,7 +37,12 @@ namespace MiniWareAPI.Controllers
         {
             ResponseAPI<MensajeGeneral> Respuesta = _repository.Save(msg);
             if (Respuesta.Error)
-                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+                if (Respuesta.Modelo == null)
+                    throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
+                else
+                {
+                    throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.OK, "Mensaje General Almacenado Correctamente con ID: " + ((MensajeGeneral)Respuesta.Modelo).Id + ", pero ocurrio un problema en la disperción a los alumnos el error fue" + Respuesta.Mensage));
+                }
             return true;
         }
 

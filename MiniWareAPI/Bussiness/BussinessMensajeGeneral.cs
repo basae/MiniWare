@@ -23,14 +23,40 @@ namespace Bussiness
                 if (Msg == null)
                     throw new Exception("El Objeto Mensaje es Nulo o Vacio");
                 if (Msg.Id.HasValue && Msg.Id != 0)
-                    throw new Exception("El id debe ser nulo o 0");
+                    throw new Exception("El id Debe ser nulo o 0");
                 else
                     Msg.Id = 0;
                 if (string.IsNullOrWhiteSpace(Msg.De))
-                    throw new Exception("El remitente debe tener un Valor");
+                    throw new Exception("El Remitente Debe Tener un Valor");
                 if (string.IsNullOrWhiteSpace(Msg.Descripcion))
-                    throw new Exception("Debe contener un mensaje");
+                    throw new Exception("Debe Contener un Mensaje");
+                if (Msg.Grado == null || Msg.Grado <= 0)
+                    throw new Exception("Falta Asignar el Grado a donde se Mandara el Mensaje");
+                if (string.IsNullOrWhiteSpace(Msg.Grupo) || Msg.Grupo.Length > 2)
+                    throw new Exception("Debe Tener un Grupo a donde se Mandara el Mensaje y Debe ser mayor a 2 caracteres");
                 Respuesta = repository.Save(Msg);
+                if (Respuesta.Modelo != null && Convert.ToInt16(Respuesta.Modelo) > 0)
+                {
+                    Msg.Id = (int)Respuesta.Modelo;
+                    ResponseAPI<User> GrupoAsignado = new BussinessUsuario().Get(Msg.Grado, Msg.Grupo);
+                    if (GrupoAsignado.Error)
+                        throw new Exception("Ocurrio un Error al Obtener los Alumnos del Grupo, el Mensaje no podra Enviarse");
+                    ResponseAPI<MensajePersonal> StatusSave = new ResponseAPI<MensajePersonal>();
+                    foreach (User usr in GrupoAsignado.List)
+                    {
+                        BussinessMensajePersonal objSaveMensaje = new BussinessMensajePersonal();
+                        StatusSave = objSaveMensaje.Save(new MensajePersonal()
+                        {
+                            IdUsuario = usr.Id,
+                            Mensaje = Msg
+                        });
+                        if (StatusSave.Error)
+                        {
+                            Respuesta.Modelo = Msg;
+                            throw new Exception(StatusSave.Mensage);
+                        }
+                    }
+                }
                 if (Respuesta.Error)
                     throw new Exception(Respuesta.Mensage);
             }
