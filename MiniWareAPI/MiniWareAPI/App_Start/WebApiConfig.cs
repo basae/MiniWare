@@ -23,7 +23,7 @@ namespace MiniWareAPI
 
             config.Routes.MapHttpRoute(
                 name: "MensajesGenerales",
-                routeTemplate: "api/{controller}/fecha/{Date}",
+                routeTemplate: "api/{controller}/Fecha/{Date}",
                 defaults: new { Date = RouteParameter.Optional }
             );
         }
