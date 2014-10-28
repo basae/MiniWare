@@ -13,13 +13,13 @@ namespace MiniWareAPI.Controllers
         // GET api/mensajepersonal
         private BussinessMensajePersonal _repositorio = new BussinessMensajePersonal();
 
-        public IEnumerable<MensajePersonal> Get(int id)
+        public IEnumerable<MensajeGeneral> Get(int id)
         {
             ResponseAPI<MensajePersonal> Respuesta = new ResponseAPI<MensajePersonal>();
             Respuesta = _repositorio.Get(id);
             if (Respuesta.Error)
                 throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.BadRequest, Respuesta.Mensage));
-            return Respuesta.List;
+            return Respuesta.List.Select(x => x.Mensaje);
         }
 
 

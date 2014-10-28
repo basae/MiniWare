@@ -1,0 +1,16 @@
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\App1.dll
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\App1.pdb
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\App1.dll.mdb
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\App1.App1.apk
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\App1.App1-Signed.apk
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\App1.dll
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\App1.pdb
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\android\bin\App1.App1.apk
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\res\layout\main.xml
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\res\values\strings.xml
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\res\drawable\icon.png
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\R.cs.flag
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\uploadflags.txt
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\RestSharp.MonoDroid.dll
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\obj\Debug\res\layout\mensaje.xml
