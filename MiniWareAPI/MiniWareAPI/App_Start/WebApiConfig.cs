@@ -20,15 +20,6 @@ namespace MiniWareAPI
                 routeTemplate: "api/{controller}/Grado/{grado}/Grupo/{grupo}",
                 defaults: new { grado= RouteParameter.Optional,grupo=RouteParameter.Optional}
             );
-
-<<<<<<< HEAD
-            config.Routes.MapHttpRoute(
-                name: "MensajesGenerales",
-                routeTemplate: "api/{controller}/Fecha/{Date}",
-                defaults: new { Date = RouteParameter.Optional }
-            );
-=======
->>>>>>> 8f895ee678f178ed6cc2c58a467f97b0dba90303
         }
     }
 }

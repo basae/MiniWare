@@ -7,25 +7,14 @@ SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
 -- Author:		<Author,,Name>
--- Create date: 21-10-2014
--- Description:	Inserta un Mensaje Personal
+-- Create date: 27-10-2014
+-- Description:	Trae los mensajes de cada alumno que no esten vistos
 -- =============================================
 
-CREATE PROCEDURE [dbo].[SP_I_MENSAJEPERSONAL]
-	@IdMensajeGeneral int,
-	@IdUsuario int
+CREATE PROCEDURE [dbo].[SP_S_MensajesGeneralById]
+	@IdMensaje int
 AS
 BEGIN
-	INSERT INTO [dbo].[MensajePersonal]
-	(
-		IdMensajeGeneral,
-		IdUsuario,
-		Visto
-	)
-	VALUES
-	(
-		@IdMensajeGeneral,
-		@IdUsuario,
-		0
-	)
+	SELECT *FROM MENSAJEGENERAL WHERE ID=@IdMensaje
+	
 END

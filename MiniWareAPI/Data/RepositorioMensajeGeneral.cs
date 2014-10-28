@@ -63,10 +63,51 @@ namespace Data
                                              Id=(int)row["Id"],
                                              De=(string)row["De"],
                                              Descripcion=(string)row["Descripcion"],
-                                             FechaCierre=(DateTime)row["FechaCierre"]
+                                             FechaCierre=(DateTime)row["FechaCierre"],
+                                             Grado=(row["Grado"]==DBNull.Value)?0:(int)row["Grado"],
+                                             Grupo=(row["Grupo"]==DBNull.Value)?"":(string)row["Grupo"],
+                                             FechaCreacion=(DateTime)row["FechaCreacion"]
                                          };
                         if (Respuesta.List.OfType<Exception>().Count() > 0)
                             throw new Exception(Respuesta.List.OfType<Exception>().FirstOrDefault().Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Respuesta.Error = true;
+                Respuesta.Mensage = ex.Message;
+            }
+
+            return Respuesta;
+        }
+
+        
+        public ResponseAPI<MensajeGeneral> Get(int id)
+        {
+            ResponseAPI<MensajeGeneral> Respuesta = new ResponseAPI<MensajeGeneral>();
+            try
+            {
+                using (Conexion)
+                {
+                    Conexion.Open();
+                    using (SqlCommand cmd = new SqlCommand("SP_S_MensajesGeneralById", Conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdMensaje", id);
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        Respuesta.Modelo = new MensajeGeneral
+                                         {
+                                             Id=(int)dt.Rows[0]["Id"],
+                                             De = (string)dt.Rows[0]["De"],
+                                             Descripcion = (string)dt.Rows[0]["Descripcion"],
+                                             FechaCierre = (DateTime)dt.Rows[0]["FechaCierre"],
+                                             FechaCreacion=(DateTime)dt.Rows[0]["FechaCreacion"],
+                                             Grado=(int)dt.Rows[0]["Grado"],
+                                             Grupo=(string)dt.Rows[0]["Grupo"]
+                                         };
                     }
                 }
             }

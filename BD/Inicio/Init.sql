@@ -18,7 +18,7 @@ create table Usuario
 
 go
 
-alter table MensajeGeneral
+create table MensajeGeneral
 (
 Id int primary key identity,
 Descripcion text,
@@ -28,7 +28,6 @@ fechaCierre datetime,
 Grado int,
 Grupo varchar(2)
 )
-
 go
 
 create table MensajePersonal
