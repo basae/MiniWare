@@ -22,14 +22,18 @@ BEGIN
 		Descripcion,
 		De,
 		FechaCreacion,
-		FechaCierre
+		FechaCierre,
+		Grado,
+		Grupo
 	)
 	VALUES
 	(
 		@Descripcion,
 		@De,
 		getdate(),
-		@FechaCierre
+		@FechaCierre,
+		@Grado,
+		@Grupo
 	)
 
 	set @Id=scope_identity();

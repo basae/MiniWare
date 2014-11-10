@@ -37,5 +37,28 @@ namespace Bussiness
             return Respuesta;
 
         }
+
+        public ResponseAPI<MensajePersonal> Get(int id)
+        {
+            ResponseAPI<MensajePersonal> Respuesta = new ResponseAPI<MensajePersonal>();
+            try
+            {
+                if (id==null || id==0)
+                    throw new Exception("El Id del Alumno es Requerido");
+                
+                Respuesta = _repositorio.Get(id);
+                if (Respuesta.Error)
+                    throw new Exception(Respuesta.Mensage);
+            }
+            catch (Exception ex)
+            {
+                Respuesta.Error = true;
+                Respuesta.Mensage = ex.Message;
+
+            }
+            return Respuesta;
+
+        }
+
     }
 }

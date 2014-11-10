@@ -20,7 +20,6 @@ namespace MiniWareAPI
                 routeTemplate: "api/{controller}/Grado/{grado}/Grupo/{grupo}",
                 defaults: new { grado= RouteParameter.Optional,grupo=RouteParameter.Optional}
             );
-
         }
     }
 }

@@ -1,0 +1,2 @@
+C:\Users\ebastar\Documents\GitHub\MiniWare\MiniWare\App1\App1\bin\Debug\App1.dll
+C:\Users\ebastar\Downloads\restsharp-104.4.0.1\restsharp-104.4.0.1\lib\android\RestSharp.MonoDroid.dll

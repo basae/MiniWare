@@ -29,5 +29,3 @@ BEGIN
 		0
 	)
 END
-select *from mensajegeneral
-select *from mensajepersonal

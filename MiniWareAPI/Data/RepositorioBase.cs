@@ -13,6 +13,7 @@ namespace Data
         public RepositorioBase()
         {
             Conexion = new SqlConnection(ConfigurationManager.AppSettings["MiniWareBD"]);
+            
         }
     }
 }
